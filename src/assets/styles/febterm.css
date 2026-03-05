@@ -1,0 +1,559 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f0f2f5;
+}
+
+/* HEADER */
+.header {
+    background: #0b5fa5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 60%;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid #ccc;
+    /* base border */
+    transition: 0.2s ease;
+}
+
+/* 🔥 Global Focus Effect */
+input:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #0b5fa5;
+    box-shadow: 0 0 6px rgba(11, 95, 165, 0.3);
+    transition: 0.2s ease;
+}
+
+/* 🔥 Focus Highlight Effect */
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border: 1px solid #0b5fa5;
+    box-shadow: 0 0 6px rgba(11, 95, 165, 0.3);
+}
+
+/* POLICY ROW */
+.policy-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* BUTTONS */
+.button-group {
+    margin-top: 15px;
+}
+
+/* ===== PREMIUM BUTTON UPGRADE ===== */
+
+/* Base transition for all buttons */
+.blue-btn,
+.calculate-btn,
+.clear-btn,
+.remove-btn,
+.add-btn,
+.back-btn {
+    border: 2px solid white;
+    /* 🔥 White outline */
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover lift effect */
+.blue-btn:hover,
+.calculate-btn:hover,
+.clear-btn:hover,
+.remove-btn:hover,
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05);
+}
+
+/* Click press effect */
+.blue-btn:active,
+.calculate-btn:active,
+.clear-btn:active,
+.remove-btn:active,
+.add-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.blue-btn {
+    background: #0b5fa5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, #11b05c, #00a651);
+    color: white;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background: #c00000;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 35%;
+}
+
+/* ===== PREMIUM DASHBOARD CARDS (REDUCED WIDTH) ===== */
+
+.card {
+    width: 70%;
+    /* reduced width */
+    margin: 0 auto 14px auto;
+    /* center horizontally */
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.card span {
+    display: block;
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ===== COLOR THEMES (SOFTER GRADIENT STYLE) ===== */
+
+.blue {
+    background: linear-gradient(135deg, #1d6fb8, #0b5fa5);
+    color: white;
+}
+
+.green {
+    background: linear-gradient(135deg, #11b05c, #00a651);
+    color: white;
+}
+
+.yellow {
+    background: linear-gradient(135deg, #ffcc33, #f4b400);
+    color: #1a1a1a;
+}
+
+.grey {
+    background: linear-gradient(135deg, #e0e0e0, #cfcfcf);
+    color: #1a1a1a;
+}
+
+/* TABLE */
+.table-section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    table-layout: fixed;
+    /* 🔥 KEY FIX */
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 10%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 12%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 13%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 11%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 11%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 9%;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 12%;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+    width: 10%;
+}
+
+th:nth-child(9),
+td:nth-child(9) {
+    width: 16%;
+}
+
+th {
+    background: #0b5fa5;
+    color: white;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+}
+
+td input,
+td select {
+    width: 95%;
+    padding: 4px;
+}
+
+/* ADD REMOVE BUTTONS */
+.row-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.remove-btn {
+    background: #c00000;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn {
+    background: #0b5fa5;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== HEADER WITH BACK BUTTON ===== */
+
+.header {
+    background: #0b5fa5;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-title {
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    background: white;
+    color: #0b5fa5;
+    border: none;
+    padding: 6px 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #e6e6e6;
+}
+
+.payment,
+.riderApe {
+    text-align: left;
+}
+
+/* Make Incentive per Policy bold */
+.incentive {
+    font-weight: 700;
+    color: #0b5fa5;
+    background-color: #f3f8ff;
+}
+
+#tncIcon {
+    background: #f5f5f5;
+}
+
+#tncIcon:hover {
+    background: #0b5fa5;
+    color: white;
+    transition: 0.2s;
+}
+
+/* Overlay */
+.tnc-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Modal box - Bigger */
+.tnc-box {
+    background: #ffffff;
+    width: 750px;
+    /* 🔥 Increased width */
+    max-width: 95%;
+    height: 70vh;
+    /* 🔥 Taller modal */
+    margin: 60px auto;
+    border-radius: 12px;
+    border: 2px solid #0b5fa5;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Body - Scrollable */
+.tnc-body {
+    padding: 20px 28px;
+    font-size: 13px;
+    /* 🔥 Reduced font size */
+    line-height: 1.6;
+    color: #333;
+    overflow-y: auto;
+    /* 🔥 Scroll if content long */
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Optional: Slightly tighter bullet spacing */
+.tnc-body li {
+    margin-bottom: 6px;
+}
+
+/* Header */
+.tnc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, #0b5fa5, #1f77c8);
+    color: white;
+}
+
+.tnc-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Close button */
+.tnc-close {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.tnc-close:hover {
+    transform: scale(1.2);
+}
+
+.calculate-btn:hover {
+    box-shadow: 0 0 18px rgba(17, 176, 92, 0.6);
+}
+
+/* Body */
+.tnc-body {
+    padding: 20px 25px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Bullet styling */
+.tnc-body ul {
+    padding-left: 20px;
+}
+
+.tnc-body li {
+    margin-bottom: 8px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tnc-warning {
+    color: #c62828;
+    font-weight: 600;
+}
+
+/* ===== Glow when eligible ===== */
+
+.sticky-bar-fill.complete {
+    background: linear-gradient(135deg, #11b05c, #00a651);
+    box-shadow: 0 0 15px rgba(17, 176, 92, 0.9),
+        0 0 30px rgba(17, 176, 92, 0.6);
+    animation: glowPulse 1s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 8px rgba(17, 176, 92, 0.6);
+    }
+
+    to {
+        box-shadow: 0 0 35px rgba(17, 176, 92, 1);
+    }
+}
+
+/* ===== Sticky Eligibility Bar ===== */
+
+.sticky-eligibility {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+    padding: 14px 20px;
+    z-index: 9999;
+}
+
+.sticky-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-bar-wrapper {
+    width: 100%;
+    height: 16px;
+    background: #e6e6e6;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.sticky-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #1d6fb8, #0b5fa5);
+    border-radius: 30px;
+    transition: width 0.4s ease;
+}
+
+/* ===== Dual Progress Row Layout ===== */
+
+.sticky-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.sticky-label {
+    flex-shrink: 0;
+}
+
+.sticky-amount {
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* Different colors for bars */
+
+#apeProgressBar {
+    background: linear-gradient(135deg, #1d6fb8, #0b5fa5);
+}
+
+#policyProgressBar {
+    background: linear-gradient(135deg, #ffcc33, #f4b400);
+}
+
+
+/* Add bottom space so content doesn't hide behind sticky bar */
+body {
+    padding-bottom: 100px;
+}
+
+.policy-progress {
+    margin-top: 8px;
+}

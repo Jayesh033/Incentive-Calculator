@@ -1,0 +1,139 @@
+/* ===== GLOBAL ===== */
+
+.homepage-wrapper {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0b4f8a 0%, #083763 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+    width: 140px;
+    margin-bottom: -40px;
+    margin-top: 0px;
+    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* ===== SECTION TITLES ===== */
+
+h2 {
+    margin-top: 35px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* ===== BUTTON ROW ===== */
+
+.button-row {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+/* ===== BUTTON BASE STYLE ===== */
+
+.choice-btn {
+    padding: 16px 42px;
+    min-width: 180px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    transition: all 0.25s ease;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Hover Effect */
+
+.choice-btn:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Active Button */
+
+.choice-btn.active {
+    background: linear-gradient(145deg, #0a7d32, #0c963a);
+    border: 1px solid #ffffff;
+    /* stronger white border */
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45),
+        0 0 15px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(17, 176, 92, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 25px rgba(17, 176, 92, 0.9);
+    }
+}
+
+/* ===== RESPONSIVE SAFETY ===== */
+
+@media (max-width: 768px) {
+
+    .choice-btn {
+        min-width: 140px;
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+.money {
+    position: fixed;
+    top: -50px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
