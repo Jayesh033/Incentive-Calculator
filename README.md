@@ -95,9 +95,3 @@ src/
 └── main.jsx            # Application entry point
 ```
 
-## Migration Notes
-
-This React migration aimed for pixel-perfect fidelity with the original system while upgrading the underlying technology. 
-- Global CSS conflicts from the original `index.html` were resolved by scoping page styles via custom React hooks (`useCalcBodyStyle.js`).
-- HTML forms and tables have been replaced by state-managed React components (`useState`, `useRef`, `useEffect`).
-- Native browser functions like `window.confirm` and `alert` are maintained for familiar interaction.
